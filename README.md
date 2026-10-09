@@ -1,26 +1,80 @@
-# 🛡️ SGE - Sistema de Gerenciamento de EPIs
+# Gerenciamento de EPIs
 
-Sistema corporativo em **Java/Spring Boot** para controle de segurança do trabalho e estoque.
+Sistema de gerenciamento de EPIs e controle de empréstimos desenvolvido em Java 17 e Spring Boot. Interface via terminal (CLI) com persistência em MySQL.
 
-> **Status:** APRESENTADO
+## Overview
 
-## 👥 Autores (SENAI 2025)
-* Gabriel Vanderlinde
-* Jonathan
-* Matheus Bagatolli
-* Rhudsson
+Aplicação CLI para gerenciamento profissional de equipamentos de proteção individual, rastreamento de empréstimos e controle de estoque. Desenvolvida com foco em funcionalidade, persistência de dados e arquitetura limpa.
 
-## Funcionalidades
-* **Colaboradores:** Cadastro, atualização e inativação.
-* **Estoque:** Monitoramento de disponibilidade de EPIs.
-* **Empréstimos:** Controle seguro com validação de estoque e histórico de devoluções.
-* **Interface:** Sistema via Terminal (CLI) simples e direto.
+## Tech Stack
 
-## Tecnologias
-* **Java 17**
-* **Spring Boot 4.0.0**
-* **MySQL**
-* **Maven**
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Maven
 
-## Como rodar
-1. Tenha o **Java 17** e **MySQL** (porta 3306) instalados.
+## Features
+
+- Cadastro de EPIs
+- Gerenciamento de empréstimos
+- Rastreamento de devolução
+- Controle de estoque
+- Registros de histórico
+- Interface CLI intuitiva
+- Persistência em MySQL
+
+## Getting Started
+
+### Prerequisites
+
+- Java 17+
+- Maven
+- MySQL
+
+### Installation
+
+```bash
+git clone https://github.com/GabrielVanderlinde/gerenciamento-epi.git
+cd gerenciamento-epi
+```
+
+### Database configuration
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost/epi_db
+spring.datasource.username=root
+spring.datasource.password=root
+```
+
+### Run the application
+
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+
+## Architecture
+
+```text
+Controller (CLI)
+  ↓
+Service Layer
+  ↓
+Repository (Data Access)
+  ↓
+MySQL Database
+```
+
+## Notes
+
+This project demonstrates practical Spring Boot development with CLI interface, business logic implementation, and database persistence.
+
+## License
+
+MIT
+
+## Author
+
+Gabriel Vanderlinde
