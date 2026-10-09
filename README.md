@@ -1,80 +1,65 @@
 # Gerenciamento de EPIs
 
-Sistema de gerenciamento de EPIs e controle de empréstimos desenvolvido em Java 17 e Spring Boot. Interface via terminal (CLI) com persistência em MySQL.
+Aplicação de linha de comando para cadastro de equipamentos de proteção individual (EPIs), controle de estoque e acompanhamento de empréstimos e devoluções. Projeto desenvolvido para praticar desenvolvimento backend com Java e Spring Boot.
 
-## Overview
-
-Aplicação CLI para gerenciamento profissional de equipamentos de proteção individual, rastreamento de empréstimos e controle de estoque. Desenvolvida com foco em funcionalidade, persistência de dados e arquitetura limpa.
-
-## Tech Stack
+## Tecnologias
 
 - Java 17
 - Spring Boot
-- Spring Data JPA
-- Hibernate
+- Spring Data JPA e Hibernate
 - MySQL
 - Maven
 
-## Features
+## Funcionalidades
 
-- Cadastro de EPIs
-- Gerenciamento de empréstimos
-- Rastreamento de devolução
-- Controle de estoque
-- Registros de histórico
-- Interface CLI intuitiva
-- Persistência em MySQL
+- Cadastro e gerenciamento de EPIs
+- Controle de empréstimos e devoluções
+- Acompanhamento de estoque
+- Persistência dos dados em banco relacional
+- Interface via terminal (CLI)
 
-## Getting Started
+## Como executar
 
-### Prerequisites
+### Pré-requisitos
 
-- Java 17+
+- JDK 17 ou superior
 - Maven
 - MySQL
 
-### Installation
+Clone o repositório e acesse a pasta:
 
 ```bash
 git clone https://github.com/GabrielVanderlinde/gerenciamento-epi.git
 cd gerenciamento-epi
 ```
 
-### Database configuration
+Configure a conexão com o banco de dados nas propriedades da aplicação. Exemplo:
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost/epi_db
-spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.username=SEU_USUARIO
+spring.datasource.password=SUA_SENHA
 ```
 
-### Run the application
+Compile e execute:
 
 ```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
-## Architecture
+> Ajuste as configurações de conexão de acordo com o ambiente local. Não publique credenciais reais.
+
+## Estrutura conceitual
 
 ```text
-Controller (CLI)
-  ↓
-Service Layer
-  ↓
-Repository (Data Access)
-  ↓
-MySQL Database
+Interface CLI → Serviços → Repositórios → MySQL
 ```
 
-## Notes
+## Objetivo do projeto
 
-This project demonstrates practical Spring Boot development with CLI interface, business logic implementation, and database persistence.
+Consolidar conhecimentos de Java, Spring Boot, persistência de dados e organização da lógica de negócio.
 
-## License
-
-MIT
-
-## Author
+## Autor
 
 Gabriel Vanderlinde
